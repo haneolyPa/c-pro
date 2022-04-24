@@ -1,2 +1,5 @@
-#out 폴터 제외
+#out 폴더 제외
 out/
+
+#.vscode 폴더 제외
+.vscode/
