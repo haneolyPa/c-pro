@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "stdio.h": "c",
+        "libc-header-start.h": "c",
+        "features.h": "c",
+        "stdc-predef.h": "c",
+        "cdefs.h": "c",
+        "stddef.h": "c"
+    }
+}
