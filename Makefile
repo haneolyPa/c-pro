@@ -4,7 +4,7 @@ OUTDIR=out
 
 all: ch1 ch2 ch3
 
-ch1: hello c2ff copy test_fn power_fn printLongestLine
+ch1: hello c2ff copy power_fn printLongestLine
 
 hello: hello.c 
 	$(CC) $(CFLAGS) -o $(OUTDIR)/hello hello.c
@@ -162,3 +162,12 @@ reverse.o: reverse.c
 
 reverse_test.o: reverse_test.c
 	$(CC) $(CFLAGS) -c -o $(OUTDIR)/reverse_test.o reverse_test.c
+
+itoa: itoa.o itoa_test.o
+	$(CC) -o $(OUTDIR)/itoa $(OUTDIR)/itoa.o $(OUTDIR)/itoa_test.o
+
+itoa.o: itoa.c
+	$(CC) $(CFLAGS) -c -o $(OUTDIR)/itoa.o itoa.c
+
+itoa_test.o: itoa_test.c
+	$(CC) $(CFLAGS) -c -o $(OUTDIR)/itoa_test.o itoa_test.c
