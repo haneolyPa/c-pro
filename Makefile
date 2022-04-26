@@ -163,8 +163,8 @@ reverse.o: reverse.c
 reverse_test.o: reverse_test.c
 	$(CC) $(CFLAGS) -c -o $(OUTDIR)/reverse_test.o reverse_test.c
 
-itoa: itoa.o itoa_test.o
-	$(CC) -o $(OUTDIR)/itoa $(OUTDIR)/itoa.o $(OUTDIR)/itoa_test.o
+itoa: itoa.o itoa_test.o reverse.o
+	$(CC) -o $(OUTDIR)/itoa $(OUTDIR)/itoa.o $(OUTDIR)/itoa_test.o $(OUTDIR)/reverse.o
 
 itoa.o: itoa.c
 	$(CC) $(CFLAGS) -c -o $(OUTDIR)/itoa.o itoa.c
