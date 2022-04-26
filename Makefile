@@ -119,7 +119,7 @@ bitcount.o: bitcount.c
 bitcount_test.o: bitcount_test.c
 	$(CC) $(CFLAGS) -c -o $(OUTDIR)/bitcount_test.o bitcount_test.c
 
-ch3: binsearch count_digits_switch atoi2 shellsort reverse
+ch3: binsearch count_digits_switch atoi2 shellsort reverse itoa trim
 
 binsearch: binsearch.o binsearch_test.o
 	$(CC) -o $(OUTDIR)/binsearch $(OUTDIR)/binsearch.o $(OUTDIR)/binsearch_test.o
@@ -171,3 +171,12 @@ itoa.o: itoa.c
 
 itoa_test.o: itoa_test.c
 	$(CC) $(CFLAGS) -c -o $(OUTDIR)/itoa_test.o itoa_test.c
+
+trim: trim.o trim_test.o
+	$(CC) -o $(OUTDIR)/trim $(OUTDIR)/trim.o $(OUTDIR)/trim_test.o
+
+trim.o: trim.c
+	$(CC) $(CFLAGS) -c -o $(OUTDIR)/trim.o trim.c
+
+trim_test.o: trim_test.c
+	$(CC) $(CFLAGS) -c -o $(OUTDIR)/trim_test.o trim_test.c
