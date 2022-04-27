@@ -2,7 +2,7 @@ CC=gcc
 CFLAGS=-g -Wall
 OUTDIR=out
 
-all: ch1 ch2 ch3
+all: ch1 ch2 ch3 ch4
 
 ch1: hello c2ff copy power_fn printLongestLine
 
@@ -180,3 +180,11 @@ trim.o: trim.c
 
 trim_test.o: trim_test.c
 	$(CC) $(CFLAGS) -c -o $(OUTDIR)/trim_test.o trim_test.c
+
+ch4: flmat
+
+flmat: find_line_matching.o
+	$(CC) -o $(OUTDIR)/flmat $(OUTDIR)/find_line_matching.o
+
+find_line_matching.o: ch4/find_line_matching.c
+	$(CC) $(CFLAGS) -c -o $(OUTDIR)/find_line_matching.o ch4/find_line_matching.c
